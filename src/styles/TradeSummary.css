@@ -1,0 +1,3 @@
+.TradeSummary-container {margin: 25px; background: lightgray;}
+.TradeSummary-individual {display: inline-flex; align-items: center; justify-content: flex-start;}
+.Trades-Items {display: flex; align-items: center; justify-content: flex-start; padding: 10px;}

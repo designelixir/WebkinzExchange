@@ -1,0 +1,6 @@
+.TradePage h1 {color: black;}
+.TradesContainer {border: 1px solid black; padding: 50px;}
+.Trades {border: 2px solid blue; border-radius: 5px;}
+
+
+.Trades-Items {display: flex; align-items: center; justify-content: center;}

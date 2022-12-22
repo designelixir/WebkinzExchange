@@ -1,0 +1,19 @@
+
+.Item {background: white; margin: 10px;  width: 175px; border: 1px solid gray; border-radius: 5px; text-align: center; padding: 0px;}
+.Item-store{color: gray; font-size: 12px; padding: 5px;}
+
+.Item-soldby-banner {
+    background: #e2e2e2; width: 100%; border-top-left-radius: 5px; border-top-right-radius: 5px; margin-top: -12px;
+}
+
+.Item-image {height: 100px;}
+.Item-title {font-size: 14px;text-align: center; margin: 10px;}
+.Item-labels {display: flex; justify-content: space-evenly; align-items: center; height: 25px;}
+.Item-tag {background: gray; color: white; margin: 0; padding: 5px 10px; border-radius: 15px;}
+.Item-type {line-height: 10px; margin: 0; padding: 0; color: gray;}
+.Item-buttons {display: flex; margin: 10px 0px; align-items: center; justify-content: space-evenly;}
+button {background: #3387EC; padding: 5px; color: white; border-radius: 5px;}
+.Item-basket-add {padding: 5px 10px; background: green;}
+.Item-basket-subtract {padding: 5px 10px; background: red;}
+
+

@@ -1,0 +1,14 @@
+.headerContainer {position: sticky; height: 100px; display: inline-flex; align-items: center; justify-content: space-between; width: 100%; background: #e2e2e2; }
+
+.headerLogo {height: 60%; padding-right: 25px;}
+
+.headerSearchContainer {display: flex; flex: 1; align-items: center; justify-content: center;}
+.headerSearchInput {border: 0.5px solid gray;display: flex; flex: 1; border-radius: 5px; width: 100%; height: 40px; }
+.headerSearchInputButton {background: gold; padding: 12px; margin: 5px; border-radius: 5px;}
+.headerNav {display: inline-flex; align-items: center; justify-content: center; color: white;}
+
+.headerNavOption {color: black; text-align: center; line-height: 5px;}
+.headerNavOption p:nth-child(1)  {font-weight: 900;}
+.headerNav div {margin: 10px;}
+
+.tradescount { background: red; color: white; padding: 5px 9px; border-radius: 25px; margin-left: 5px;}
