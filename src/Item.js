@@ -1,9 +1,21 @@
-import React from 'react'
-import "./styles/Item.css"
-
+import React from 'react';
+import "./styles/Item.css";
+import { useStateValue } from "./StateProvider";
 
 function Item( {itemid, title, user, imageurl, tags, type, quantity, tradeable }) {
-
+  const [{ basket }, dispatch] = useStateValue();
+  console.log("this is the basket", basket)
+  const addToBasket = () => {
+    //dispatch the action into data layer 
+    dispatch({
+      type: 'ADD_TO_BASKET',
+      item: {
+        itemid: itemid,
+        title: title,
+        imageurl: imageurl
+      }
+    });
+  }
   return (
   
     <div className="Item" id={itemid}>
@@ -28,7 +40,7 @@ function Item( {itemid, title, user, imageurl, tags, type, quantity, tradeable }
       <span className="Item-buttons">
         <button className="Item-basket-add">+</button>
         <button className="Item-basket-subtract">-</button>
-        <button className="Item-basket-boolean">{quantity} Add</button>
+        <button onClick={addToBasket} className="Item-basket-boolean">{quantity} Add</button>
         
 
       </span>

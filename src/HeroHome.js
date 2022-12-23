@@ -17,7 +17,7 @@ function HeroHome() {
              type="decoration"
              quantity="1"
              tradeable="sendable"
-            ></Item>
+          ></Item>
             
         </div>
     </div>

@@ -1,8 +1,10 @@
 import React from 'react'
 import './styles/Header.css'
 import { Link } from 'react-router-dom';
+import { useStateValue } from './StateProvider'
 
 function Header() {
+  const [{basket}, dispatch] = useStateValue();
   return (
     <div className="headerContainer">
       <Link to ="/">
@@ -20,7 +22,7 @@ function Header() {
       <div className="headerNavOption"><p>Welcome</p><p>Sign In</p></div>
       <div className="headerNavOption">
         <Link to="/trades">MY Trades</Link>
-        <span className="tradescount">0</span>
+        <span className="tradescount">{basket?.length}</span>
       </div>
       <div className="headerNavOption">MY WISHLIST</div>
     </div>

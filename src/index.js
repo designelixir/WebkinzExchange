@@ -2,16 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './styles/index.css';
 import App from './App';
-
-
+import reducer, { initialState } from './reducer';
+import { StateProvider } from './StateProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* initial state - what data looks like, reducer is how it's changed */}
+    <StateProvider initialState={initialState} reducer={reducer}>
+      {reducer}
       <App />
-
-   
+    </StateProvider>
   </React.StrictMode>
 );
 
