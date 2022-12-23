@@ -4,9 +4,20 @@ import { useStateValue } from "./StateProvider";
 
 function Item( {itemid, title, user, imageurl, tags, type, quantity, tradeable }) {
   const [{ basket }, dispatch] = useStateValue();
+
   console.log("this is the basket", basket)
   const addToBasket = () => {
     //dispatch the action into data layer 
+
+    //check if trade table with user already exists
+    if (user === "A"){
+      console.log("user is ", user);
+      //create basket
+    } else {
+      //match existing basket
+    }
+
+    //if it does, add to that specific trade table
     dispatch({
       type: 'ADD_TO_BASKET',
       item: {
@@ -41,8 +52,6 @@ function Item( {itemid, title, user, imageurl, tags, type, quantity, tradeable }
         <button className="Item-basket-add">+</button>
         <button className="Item-basket-subtract">-</button>
         <button onClick={addToBasket} className="Item-basket-boolean">{quantity} Add</button>
-        
-
       </span>
     </div>
   

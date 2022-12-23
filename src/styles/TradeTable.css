@@ -1,0 +1,20 @@
+
+
+.TradeTable-mini {width: 250px; height: 50px; display: flex; align-items: center; justify-content: center; background: purple; color: white;}
+.TradeTable-full-container {width: 100vw; height: calc(100vh - 100px); top: 0; left: 0; position: fixed; border: 2px solid red; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(2px)}
+.TradeTable-full { width: 95%; height: 90%; background: purple; border:4px solid #03005B; border-radius: 15px;  }
+
+.TradeTable-navigation {width: 98%; color: white; padding: 5px; display: flex; align-items: center; justify-content: space-between;}
+.close-button {background: gold; border-radius: 25px; width: 40px; height: 40px; border: 4px solid #03005B; color: #03005B; font-weight: 900;}
+h3 {width: 100%; text-align: center; color: white;}
+
+.TradeTable-sections {border: 5px solid lime; width: 99%; height: 80%; display: flex;}
+.TradeTable-chat{width: 450px; border: 2px solid white; height: 100%;}
+
+.TradeTable-trade {width: 100%;}
+.TradeTable-their-items {background: red; height: 50%; width: 100%;}
+.TradeTable-your-items {background: gold; height: 50%; width: 100%; }
+
+ul {margin: 0; height: 100%; width: 100%; padding: 0px; display: inline-flex; align-items: center; justify-content: flex-start; overflow-x: scroll;}
+
+.TradeTable-their-items li {min-height: 125px; margin: 10px;  min-width: 125px; border-radius: 25px; border: 4px solid rgba(255,255,255,0.5); list-style: none; display: flex; align-items: center; justify-content: center;}
