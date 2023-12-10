@@ -1,0 +1,41 @@
+:root {
+    --avatar-yellow: #FDFF88;
+    --border-purple: #640130; 
+    --dock-purple: #8901C7;
+    --inset-dock-purple: #BD37FB;
+    --dock-gold: #FCD002;
+    --dock-border-orange: #DC8E00;
+}
+
+@import url("https://use.typekit.net/hfn6gel.css");
+* {font-family: 'greycliff-cf', sans-serif; }
+body {
+    background: #56CCF2;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #2F80ED, #56CCF2, white);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #2F80ED, #56CCF2, white); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    height: calc(98vh - 40px ); border: 2px solid red; overflow-y: scroll;
+}
+
+h1 {text-align: center;}
+h6 {font-size: 12px; font-weight: 300;}
+label {font-weight: 700;}
+
+.centered-text {text-align: center!important;}
+
+.flex-center-center {display: flex; align-items: center; justify-content: center;}
+.flex-wrap {flex-wrap: wrap;}
+.flex-start-start {display: flex; align-items: flex-start; justify-content: flex-start;}
+.flex-end-start {display: flex; align-items: flex-end; justify-content: flex-start;}
+.flex-center-end {display: flex; align-items: center; justify-content: flex-end;} 
+.flex-center-start {display: flex; align-items: center; justify-content: flex-start;} 
+.flex-center-spacebetween {display: flex; align-items: center; justify-content: space-between;} 
+
+.item-container {width: 100px; height: 100px;}
+.item-image {width: 100px; height: 100px; background-size: contain; background-position: center center; background-repeat: no-repeat;}
+.profile-photo {width: 100px; height: 100px; background-size: contain; background-position: center center; background-repeat: no-repeat;}
+
+.link {text-decoration: none; color: inherit; font-weight: 700; line-height: 0px;}
+.hover:hover {transform: scale(1.01); cursor: pointer;}
+.link:hover {text-decoration: underline;}
+
+.filter-button {margin: 5px; border-radius: 4px; padding: 5px 15px; border: 2px inset var(--inset-dock-purple); background: var(--dock-purple); color: white;}
