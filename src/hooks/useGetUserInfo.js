@@ -3,7 +3,7 @@ import { auth, db } from '../config/firebase-config';
 import { doc, getDoc, serverTimestamp, setDoc } from 'firebase/firestore';
 
 export const useGetUserInfo = () => {
-  console.log("calling useGetUserInfo");
+  
   const [userInfo, setUserInfo] = useState({
     userID: '',
     isAuth: false,
@@ -45,7 +45,7 @@ export const useGetUserInfo = () => {
         });
       }
     });
-    console.log(setUserInfo.createdAt)
+    
     // Clean up the listener when the component unmounts
     return () => unsubscribe();
   }, []);

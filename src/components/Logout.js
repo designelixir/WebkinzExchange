@@ -7,7 +7,7 @@ import { useGetUserInfo } from '../hooks/useGetUserInfo';
 export const Logout = () => {
   
     const {userID, isAuth} = useGetUserInfo();
-    console.log("checking:" + userID, isAuth)
+    
   return (
     <div>
         {isAuth ? (

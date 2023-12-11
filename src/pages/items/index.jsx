@@ -1,27 +1,43 @@
-
-import {auth, provider} from '../../config/firebase-config'
-import {signInWithPopup} from 'firebase/auth'
-import {useNavigate} from 'react-router-dom'
-import {Header} from '../../components/Header'
-import {Dock} from '../../components/Dock'
+import React, { useEffect } from 'react';
 import GetAllItems from './getAllItems'
-export const Items = () => {
-   
+export const Items = ({ setPageTitle, setPageDescription }) => {
+    useEffect(() => {
+        setPageTitle('Webkinz Items');
+        setPageDescription('This is the home page description.');
+      }, [setPageTitle, setPageDescription]);
+    
     return (
     <>
-    <Header></Header>
-    <Dock></Dock>
-    <div className="login-page flex-start-start">
+    <section>
+        <div className="all-items-wrapper flex-start-start">
+            <div className="item-filters-container">
+                <h3 className="white">Item Categories</h3>
+                <div className="item-filters-list">
+                    <ul>
+                        <li>Adventure Park</li>
+                        <li>Challenges</li>
+                        <li>Christmas &amp; Hanukkah</li>
+                        <li>Christmas Countdown</li>
+                        <li>Click-to-Win: Annual</li>
+                        <li>Click-to-Win: Non-Annual</li>
+                        <li>Clubhouse Events</li>
+                        <li>Collection Events</li>
+                        <li>Community Codes</li>
+                        <li>Curio Shop Only</li>
+                    </ul>
+                </div>
+            </div>
+            <div className="items-list">
+                <GetAllItems></GetAllItems>
+            </div>
+        </div>
         
-        <h1>Webkinz Items</h1>
-    </div>
-    <div className="flex-center-start">
-        <p>Filter by:&nbsp;&nbsp;</p>
-        <button className="filter-button">Type</button>
-        <button className="filter-button">Category</button>
+
         
-    </div>
-    <GetAllItems></GetAllItems>
+        
+    </section>
+    
+    
     </>
     
     )

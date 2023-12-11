@@ -14,12 +14,14 @@ const GetAllItems = () => {
 
         const itemsData = [];
         itemsSnapshot.forEach((doc) => {
-          const { itemName, itemImgUrl, itemAvailable } = doc.data();
+          const { itemName, itemImgUrl, itemAvailable, itemType, itemCategory } = doc.data();
           itemsData.push({
             id: doc.id,
             itemName,
             itemImgUrl,
+            itemType,
             itemAvailable,
+            itemCategory,
           });
         });
 
@@ -36,11 +38,13 @@ const GetAllItems = () => {
     <div>
       
       {items.map((item) => (
-        <ItemCard
+        <ItemCard key={item.id}
         itemID={item.id}
         itemName={item.itemName}
         itemImgUrl={item.itemImgUrl}
         itemAvailable = {item.itemAvailable}
+        itemType = {item.itemType}
+        itemCategory = {item.itemCategory}
        ></ItemCard>
       ))}
     </div>

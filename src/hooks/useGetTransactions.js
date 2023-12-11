@@ -9,8 +9,8 @@ export const useGetTransactions = () => {
     const [webkinzItems, setWebkinzItems  ] = useState([]);
     const {userID} = useGetUserInfo()
     const transactionCollectionRef = collection(db, "webkinzItems")
-    console.log("calling useGetTransactions")
-    console.log(userID)
+    
+    
 
     const getWebkinzItems = async () => {
         let unsubscribe;

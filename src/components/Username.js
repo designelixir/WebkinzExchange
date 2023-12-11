@@ -14,7 +14,7 @@ export const Username = () => {
     }
     return (
        <>{isAuth ? 
-            (<Link className="link" to="/profile">{usernameName}</Link>)
+            (<Link className="link hover" to={`/user/${userID}`}>{usernameName}</Link>)
             : 
             (<p></p>)
         }
