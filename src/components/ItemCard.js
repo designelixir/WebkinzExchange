@@ -22,6 +22,7 @@ export const ItemCard = ({ itemID, itemName, itemImgUrl, itemAvailable, itemType
   } else if (itemType === 4) {
     itemIs = 'Decoration';
   }
+  console.log("test")
 
   return (
     <>
