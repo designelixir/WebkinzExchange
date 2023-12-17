@@ -23,25 +23,8 @@ export const AddItemGrid = ({ itemID, itemName, itemImgUrl, itemAvailable, itemT
 
   return (
     <>
-    <div>
-        <div className="item-row flex-center-start">
-            <Link to={`/item/${itemID}`}>
-            <div className="Item-details">
-            <img className="Item-image" src={itemImgUrl} alt={itemName} />
-            <p className="Item-title">{itemName}</p>
-            </div>
-            </Link>
-        </div>
-    </div>
-      <div className="Item" id={itemID} datatype={itemCategory}>
-        <div className="item-details flex-center-center">
-          <h6 className="item-category">{itemCategory}</h6>
-          <h6 className="Item-type">{itemIs}</h6>
-        </div>
-        
-        <div className="flex-center-center item-card-buttons">
-
-        </div>
+    <div className="item-row" style={{border: '1px solid black'}}>
+     
       </div>
     </>
   );

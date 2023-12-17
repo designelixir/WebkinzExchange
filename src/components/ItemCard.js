@@ -69,10 +69,10 @@ export const ItemCard = ({ itemID, itemName, itemImgUrl, itemAvailable, itemType
           
             <div className="Item-details" style={{ marginTop: '-30px' }}>
               <img className="Item-image" src={itemImgUrl} alt={itemName} />
-              <Link to={`/item/${itemID}`}><p className="Item-title">{itemName}</p></Link>
+              <Link to={`/item/${itemID}`} className="link"><p className="Item-title">{itemName}</p></Link>
             </div>
           
-          <div>
+          <div className="flex-center-center" style={{margin: "5px"}}>
             <h6 className="item-category">{itemCategory}</h6>
             <h6>{itemIs}</h6>
             <h6></h6>

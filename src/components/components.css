@@ -47,7 +47,8 @@ button {background: #3387EC; padding: 5px; color: white; border-radius: 5px;}
 .item-status {padding: 2px; }
 .item-wrapper {padding: 10px 5px;}
 .Item-image {height: 100px;}
-.Item-title {font-size: 14px; text-align: center; margin: 10px;}
+.Item-title {font-size: 12px; text-align: center; margin: 10px; color: black; text-decoration: none;}
+
 .Item-type {line-height: 10px; margin: 0; padding: 0; color: gray;}
 .status span {display: none}
 .status:hover span {display: block}

@@ -54,6 +54,7 @@ header {margin-bottom: 50px; }
 .flex-center-end {display: flex; align-items: center; justify-content: flex-end;} 
 .flex-center-start {display: flex; align-items: center; justify-content: flex-start;} 
 .flex-center-spacebetween {display: flex; align-items: center; justify-content: space-between;} 
+.flex-start-spacebetween {display: flex; align-items: flex-start; justify-content: space-between;} 
 
 .flex-column {flex-direction: column;}
 .item-container {width: 100px; height: 100px;}
@@ -70,6 +71,9 @@ header {margin-bottom: 50px; }
 .search-bar input {width: 80vw; padding: 10px;}
 .tab-button-active {background: var(--dock-purple); border: none; padding: 10px 25px; border: 2px solid white; border-bottom: none; margin-bottom: 0px; border-radius: 4px 4px 0px 0px}
 .tab-button {background: var(--inset-dock-purple); border: none; opacity: 0.8; padding: 10px 25px; margin-bottom: 0px; border-radius: 4px 4px 0px 0px}
+
+.item-row {margin: 5px; border: 1px solid black; border-radius: 4px; padding: 5px;}
+
 /* Animations */
 
 .fade-out{-webkit-animation:fade-out 1s ease-out both;animation:fade-out 1s ease-out both}

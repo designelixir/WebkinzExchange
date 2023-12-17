@@ -124,16 +124,27 @@ const handleAddToFirebase = async (row) => {
       <div id="CSVOutput">
         {/* Display the CSV data with "Add to Firebase" buttons */}
         {csvData.map((row, index) => (
-          <div key={index} style={{ marginBottom: '10px' }}>
-            {row.map((field, fieldIndex) => (
-              <span key={fieldIndex} style={{ marginRight: '10px' }}>
-                {`${headers[fieldIndex]}: ${field}`}
-              </span>
-            ))}
-            <button onClick={() => handleAddToFirebase(row)}>Add to Firebase</button>
+          <div key={index} className="item-row flex-start-spacebetween" style={{ border: '1px solid black', padding: "10px 0px" }}>
+            <div className="flex-start-start">
+            
+            <img src={row[headers.indexOf('itemImgUrl')]} alt={row[headers.indexOf('itemName')]} style={{width: "75px", margin: "0px 10px", background: "white"}}/>
+            
+            <div>
+                <p>{row[headers.indexOf('itemID')]}</p>
+                <p>{row[headers.indexOf('itemName')]}</p>
+                <p>{row[headers.indexOf('itemImgUrl')]}</p>
+                <p>Item Available: {row[headers.indexOf('itemAvailable')]}</p>
+                <p>Item Dock Type: {row[headers.indexOf('itemDockType')]}</p>
+                <p>Item Type: {row[headers.indexOf('itemType')]}</p>
+            </div>
+            </div>
+              
+              <button onClick={() => handleAddToFirebase(row)}>Add to Firebase</button>
+            
           </div>
         ))}
       </div>
     </section>
   );
+  
 };
