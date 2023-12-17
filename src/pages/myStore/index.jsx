@@ -3,6 +3,7 @@ import { collection, query, where, getDocs } from 'firebase/firestore';
 import { db } from '../../config/firebase-config';
 import { useGetUserInfo } from '../../hooks/useGetUserInfo';
 import { ItemCard } from '../../components/ItemCard'; // Import the ItemCard component
+import { EditStore } from './editStore';
 
 export const MyStore = ({ setPageTitle, setPageDescription }) => {
     useEffect(() => {
@@ -36,6 +37,7 @@ export const MyStore = ({ setPageTitle, setPageDescription }) => {
   }, [userID]);
     return (
     <section>
+      <EditStore></EditStore>
         {storeItems.map((item) => (
                 <ItemCard
                 key={item.id}

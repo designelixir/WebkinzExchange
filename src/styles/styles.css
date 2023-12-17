@@ -66,6 +66,10 @@ header {margin-bottom: 50px; }
 
 .filter-button {margin: 5px; border-radius: 4px; padding: 5px 15px; border: 2px inset var(--inset-dock-purple); background: var(--dock-purple); color: white;}
 
+.search-bar {border: 2px solid gray; border-radius: 4px;}
+.search-bar input {width: 80vw; padding: 10px;}
+.tab-button-active {background: var(--dock-purple); border: none; padding: 10px 25px; border: 2px solid white; border-bottom: none; margin-bottom: 0px; border-radius: 4px 4px 0px 0px}
+.tab-button {background: var(--inset-dock-purple); border: none; opacity: 0.8; padding: 10px 25px; margin-bottom: 0px; border-radius: 4px 4px 0px 0px}
 /* Animations */
 
 .fade-out{-webkit-animation:fade-out 1s ease-out both;animation:fade-out 1s ease-out both}

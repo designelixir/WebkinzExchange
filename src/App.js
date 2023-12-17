@@ -11,6 +11,11 @@ import { MyAccount } from './pages/myAccount';
 import { MyStore } from './pages/myStore';
 import { ItemPage } from './components/ItemPage';
 import $ from 'jquery';
+import { EditItemDatabase } from './pages/editItemDatabase';
+import { GlobalStateProvider } from './components/GlobalStateContext';
+import { AddStore } from './components/AddStore';
+import { AddStuff } from './components/AddStuff';
+import { AddWishlist } from './components/AddWishlist';
 
 function App() {
   const [pageTitle, setPageTitle] = useState('');
@@ -19,7 +24,7 @@ function App() {
     <>
   
     <div className="App fade-in">
-      
+      <GlobalStateProvider>
       <Router>
         <Header title={pageTitle} description={pageDescription}></Header>
         <Routes>
@@ -30,10 +35,12 @@ function App() {
           <Route path="/my-stuff" element={<MyStuff setPageTitle={setPageTitle} setPageDescription={setPageDescription} />}/>
           <Route path="/my-store" element={<MyStore setPageTitle={setPageTitle} setPageDescription={setPageDescription} />}/>
           <Route path="/item/:itemID" element={<ItemPage setPageTitle={setPageTitle} setPageDescription={setPageDescription}/>} />
+          <Route path="/edit-database" element={<EditItemDatabase setPageTitle={setPageTitle} setPageDescription={setPageDescription}/>} />
         </Routes>
         <Dock></Dock>
         
       </Router>
+      </GlobalStateProvider>
       
       
     

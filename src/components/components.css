@@ -41,8 +41,11 @@ button {background: #3387EC; padding: 5px; color: white; border-radius: 5px;}
 #mySettingsContainer {padding: 10px; max-width: 50vw; border-radius: 8px; border: 3px solid gray; background: var(--off-white)}
 
 /* ItemCard */
-.Item {background: white; margin: 10px;  max-width: 150px; border: 1px solid gray; border-radius: 5px; text-align: center; padding: 10px;}
+.Item {background: white; margin: 10px;  width: 140px; border: 1px solid gray; border-radius: 5px; text-align: center;}
+.item-options {height: 40px; width: 40px; border-radius: 4px 0px 0px 0px; background-image: url('../assets/corner_1.png'); background-size: cover;}
+.options-dropdown {border: 1px solid black; position: absolute; padding: 2px;  margin: 10px 0px 0px 15px; width: 120px; border-radius: 0px 4px 4px 4px; background-color: #e2e2e2;}
 .item-status {padding: 2px; }
+.item-wrapper {padding: 10px 5px;}
 .Item-image {height: 100px;}
 .Item-title {font-size: 14px; text-align: center; margin: 10px;}
 .Item-type {line-height: 10px; margin: 0; padding: 0; color: gray;}
@@ -51,8 +54,11 @@ button {background: #3387EC; padding: 5px; color: white; border-radius: 5px;}
 .item-category {background: var(--off-white); padding: 2px 4px; border-radius: 6px; margin: 0px 5px; }
 .item-card-buttons button {font-size: 12px; padding: 2px 5px; margin: 1px;}
 
+.active-stuff {border: 2px solid red;}
+
 /* All Items */
-.all-items-wrapper { border: 1px solid var(--border-purple); border-radius: 8px; background: var(--dock-purple);  padding: 5px;}
+.all-items-wrapper { border: 1px solid var(--border-purple); border-radius: 8px 0px 0px 8px; background: var(--dock-purple);  padding: 5px;}
 .item-filters-container {margin-right: 5px; padding: 0px 10px; min-width: 250px;}
-.item-filters-list {border-radius: 6px 6px 0px 0px; background: var(--off-white); padding: 5px 0px;}
-.items-list {background: var(--off-white); border-radius: 6px; margin-top: 35px; width: 100%; margin-right: 10px;}
+.item-filters-list {border-radius: 6px 6px 0px 0px; background: var(--off-white); padding: 5px 0px; max-width: 250px;}
+.items-list {width: calc(100% - 317px); background: var(--off-white); border-radius: 0px 6px 6px 0px; margin-right: 10px; padding: 10px; height: 60vh; overflow-y: scroll;}
+.in-collection-indicator p {display: none;}

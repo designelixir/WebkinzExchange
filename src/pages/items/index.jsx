@@ -1,45 +1,52 @@
-import React, { useEffect } from 'react';
-import GetAllItems from './getAllItems'
+import React, { useState, useEffect } from 'react';
+import GetAllItems from './getAllItems';
+import { ItemCategories } from './itemCategories';
+
 export const Items = ({ setPageTitle, setPageDescription }) => {
-    useEffect(() => {
-        setPageTitle('Webkinz Items');
-        setPageDescription('This is the home page description.');
-      }, [setPageTitle, setPageDescription]);
-    
-    return (
+  const [activeTab, setActiveTab] = useState('itemsByCategory');
+
+  useEffect(() => {
+    setPageTitle('Webkinz Items');
+    setPageDescription('This will be the database of all webkinz items.');
+  }, [setPageTitle, setPageDescription]);
+
+  const handleTabClick = (tab) => {
+    setActiveTab(tab);
+  };
+
+  return (
     <>
-    <section>
-        <div className="all-items-wrapper flex-start-start">
-            <div className="item-filters-container">
-                <h3 className="white">Item Categories</h3>
-                <div className="item-filters-list">
-                    <ul>
-                        <li>Adventure Park</li>
-                        <li>Challenges</li>
-                        <li>Christmas &amp; Hanukkah</li>
-                        <li>Christmas Countdown</li>
-                        <li>Click-to-Win: Annual</li>
-                        <li>Click-to-Win: Non-Annual</li>
-                        <li>Clubhouse Events</li>
-                        <li>Collection Events</li>
-                        <li>Community Codes</li>
-                        <li>Curio Shop Only</li>
-                    </ul>
-                </div>
-            </div>
-            <div className="items-list">
-                <GetAllItems></GetAllItems>
-            </div>
+    <div className="tabs flex-end-start">
+          <button
+            className={activeTab === 'itemsByCategory' ? 'tab-button-active' : 'tab-button'}
+            onClick={() => handleTabClick('itemsByCategory')}
+          >
+            Items by Category
+          </button>
+          <button
+            className={activeTab === 'search' ? 'tab-button-active' : 'tab-button'}
+            onClick={() => handleTabClick('search')}
+          >
+            Search for Items
+          </button>
         </div>
+      <section className="flex-start-start flex-wrap">
         
-
         
-        
-    </section>
-    
-    
+        <div className="all-items-wrapper flex-start-start" id="itemsByCategory" style={{ display: activeTab === 'itemsByCategory' ? 'block' : 'none' }}>
+          <ItemCategories></ItemCategories>
+        </div>
+        <div id="item-search" style={{ display: activeTab === 'search' ? 'block' : 'none' }}>
+          <div className="search-bar">
+            <input type="search"></input>
+            <button style={{ padding: "10px 25px", backgroundColor: "var(--dock-gold)" }}>Search Items</button>
+          </div>
+          <h2>Showing all items:</h2>
+        </div>
+        <div className="items-list flex-start-start">
+            <GetAllItems></GetAllItems>
+          </div>
+      </section>
     </>
-    
-    )
-}
-
+  );
+};
