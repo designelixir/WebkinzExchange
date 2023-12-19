@@ -38,7 +38,8 @@ export const MyStore = ({ setPageTitle, setPageDescription }) => {
     return (
     <section>
       <EditStore></EditStore>
-        {storeItems.map((item) => (
+      <div className="flex-start-start flex-wrap">
+      {storeItems.map((item) => (
                 <ItemCard
                 key={item.id}
                 itemID={item.id}
@@ -49,6 +50,8 @@ export const MyStore = ({ setPageTitle, setPageDescription }) => {
                 itemCategory={item.itemCategory}
                 />
             ))}
+      </div>
+        
     </section>
     
     )

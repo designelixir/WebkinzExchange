@@ -4,6 +4,7 @@ import { query, collection, where, getDocs, addDoc, updateDoc, doc } from 'fireb
 import { useGetUserInfo } from '../../hooks/useGetUserInfo';
 import { showTempMessage } from '../../utils/tempMessageUtils';
 
+
 const UserProfileForm = () => {
   const { userID } = useGetUserInfo();
   const [username, setUsername] = useState('');
@@ -94,8 +95,8 @@ const UserProfileForm = () => {
   };
 
   return (
-    <div id="mySettingsContainer">
-      <h2>⚙️ My Settings</h2>
+    <div id="mySettingsContainer" className="settings-container">
+      <h2>⚙️ My Profile Settings</h2>
       <form>
         <div className="flex-center-start">
           <label htmlFor="username">Username:&nbsp;</label>

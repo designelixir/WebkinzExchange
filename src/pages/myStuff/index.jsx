@@ -37,7 +37,7 @@ export const MyStuff = ({ setPageTitle, setPageDescription }) => {
   }, [userID]);
 
   return (
-    <section>
+    <section className="flex-start-start flex-wrap">
       {myItems.map((item) => (
         <ItemCard
           key={item.id}

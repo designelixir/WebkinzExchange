@@ -50,6 +50,7 @@ const GetAllItems = () => {
           itemAvailable={item.itemAvailable}
           itemType={item.itemType}
           itemCategory={item.itemCategory}
+          itemShowCartButton={false}
         ></ItemCard>
       ))}
     </div>

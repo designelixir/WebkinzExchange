@@ -2,11 +2,12 @@ import React, { useEffect } from 'react';
 import { useGetUserInfo } from '../../hooks/useGetUserInfo';
 import UserProfileForm from './UserProfileSetup';
 import useUsername from '../../hooks/useUsername';
+import { StoreSetup } from './StoreSetup';
 
 export const MyAccount = ({ setPageTitle, setPageDescription }) => {
   useEffect(() => {
     setPageTitle('My Account');
-    setPageDescription('This project is under development. Stay tuned!');
+    setPageDescription('Change your profile settings here.');
   }, [setPageTitle, setPageDescription]);
 
     const {userID, isAuth} = useGetUserInfo();
@@ -20,6 +21,7 @@ export const MyAccount = ({ setPageTitle, setPageDescription }) => {
       <>
         <div>
           <UserProfileForm></UserProfileForm>
+          <StoreSetup></StoreSetup>
         </div>
       </>
       ) : (

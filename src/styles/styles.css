@@ -55,6 +55,7 @@ header {margin-bottom: 50px; }
 .flex-center-start {display: flex; align-items: center; justify-content: flex-start;} 
 .flex-center-spacebetween {display: flex; align-items: center; justify-content: space-between;} 
 .flex-start-spacebetween {display: flex; align-items: flex-start; justify-content: space-between;} 
+.flex-end-spacebetween {display: flex; align-items: flex-end; justify-content: space-between;}
 
 .flex-column {flex-direction: column;}
 .item-container {width: 100px; height: 100px;}

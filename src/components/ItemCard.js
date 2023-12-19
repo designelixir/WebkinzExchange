@@ -5,7 +5,7 @@ import { AddWishlist } from './AddWishlist';
 import { AddStore } from './AddStore'
 import { useGlobalState } from './GlobalStateContext'; // Import the hook
 
-export const ItemCard = ({ itemID, itemName, itemImgUrl, itemAvailable, itemType, itemCategory }) => {
+export const ItemCard = ({ itemID, itemName, itemImgUrl, itemAvailable, itemType, itemCategory, itemShowCartButton }) => {
   const { isForSaleGlobal, isWantedGlobal, isOwnedGlobal } = useGlobalState(); // Use the hook to get the global states
 
   // Use an object to store states for each itemID
@@ -45,7 +45,7 @@ export const ItemCard = ({ itemID, itemName, itemImgUrl, itemAvailable, itemType
 
   return (
     <>
-      <div className={`Item  ${itemStates.addWishlist ? 'item-wrapper-wishlist' : ''} ${itemStates.addStore ? 'item-wrapper-store' : ''}`} id={itemID} datatype={itemCategory}>
+      <div className="Item" id={itemID} datatype={itemCategory}>
         <div className="item-dropdown flex-start-start">
           <div className="item-options" id="itemOptions" onClick={handleOptionsClick}>
             <p style={{ margin: '-2px 10px 0px 0px', fontSize: '20px' }}>+</p>
@@ -77,6 +77,9 @@ export const ItemCard = ({ itemID, itemName, itemImgUrl, itemAvailable, itemType
             <h6>{itemIs}</h6>
             <h6></h6>
           </div>
+          {itemShowCartButton ? (
+            <button>Add To Cart</button>
+          ): ("")}
         </div>
       
     </>
