@@ -19,6 +19,7 @@ export const MyAccount = ({ setPageTitle, setPageDescription }) => {
       <h5 className="italic">This id comes from your Google Account. No other Google Account information is assosciated with this app.</h5>
     {isAuth ? (
       <>
+      
         <div>
           <UserProfileForm></UserProfileForm>
           <StoreSetup></StoreSetup>

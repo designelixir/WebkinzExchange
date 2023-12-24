@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AddStuff } from './AddStuff';
 import { AddWishlist } from './AddWishlist';
-import { AddStore } from './AddStore'
+import { AddStore } from './AddStore';
 import { useGlobalState } from './GlobalStateContext'; // Import the hook
 
 export const ItemCard = ({ itemID, itemName, itemImgUrl, itemAvailable, itemType, itemCategory, itemShowCartButton }) => {
@@ -45,7 +45,7 @@ export const ItemCard = ({ itemID, itemName, itemImgUrl, itemAvailable, itemType
 
   return (
     <>
-      <div className="Item" id={itemID} datatype={itemCategory}>
+      <div className={`Item ${isForSaleGlobal ? 'for-sale' : ''}`} id={itemID} datatype={itemCategory}>
         <div className="item-dropdown flex-start-start">
           <div className="item-options" id="itemOptions" onClick={handleOptionsClick}>
             <p style={{ margin: '-2px 10px 0px 0px', fontSize: '20px' }}>+</p>
@@ -55,33 +55,30 @@ export const ItemCard = ({ itemID, itemName, itemImgUrl, itemAvailable, itemType
           {itemStates.showOptions && (
             <div className="options-dropdown">
               <div className="item-card-buttons">
-                <AddStuff itemID={itemID} onClick={handleAddStuffClick} isOwned={isOwnedGlobal} /> {/* Pass isOwnedGlobal as a prop */}
-                <AddWishlist itemID={itemID} onClick={handleAddWishlistClick} isWanted={isWantedGlobal} /> {/* Pass isWantedGlobal as a prop */}
                 <AddStore itemID={itemID} onClick={handleAddStoreClick} isForSale={isForSaleGlobal} /> {/* Pass isForSaleGlobal as a prop */}
+                <AddWishlist itemID={itemID} onClick={handleAddWishlistClick} isWanted={isWantedGlobal} /> {/* Pass isWantedGlobal as a prop */}
+                <AddStuff itemID={itemID} onClick={handleAddStuffClick} isOwned={isOwnedGlobal} /> {/* Pass isOwnedGlobal as a prop */}
               </div>
             </div>
           )}
         </div>
-        
-          <div className="item-details flex-center-center">
-            <h6 className="Item-type">{itemIs}</h6>
-          </div>
-          
-            <div className="Item-details" style={{ marginTop: '-30px' }}>
-              <img className="Item-image" src={itemImgUrl} alt={itemName} />
-              <Link to={`/item/${itemID}`} className="link"><p className="Item-title">{itemName}</p></Link>
-            </div>
-          
-          <div className="flex-center-center" style={{margin: "5px"}}>
-            <h6 className="item-category">{itemCategory}</h6>
-            <h6>{itemIs}</h6>
-            <h6></h6>
-          </div>
-          {itemShowCartButton ? (
-            <button>Add To Cart</button>
-          ): ("")}
+
+        <div className="item-details flex-center-center">
+          <h6 className="Item-type">{itemIs}</h6>
         </div>
-      
+
+        <div className="Item-details" style={{ marginTop: '-30px' }}>
+          <img className="Item-image" src={itemImgUrl} alt={itemName} />
+          <Link to={`/item/${itemID}`} className="link"><p className="Item-title">{itemName}</p></Link>
+        </div>
+
+        <div className="flex-center-center" style={{ margin: '5px' }}>
+          <h6 className="item-category">{itemCategory}</h6>
+          <h6>{itemIs}</h6>
+          <h6></h6>
+        </div>
+        {itemShowCartButton ? <button>Add To Cart</button> : ''}
+      </div>
     </>
   );
 };

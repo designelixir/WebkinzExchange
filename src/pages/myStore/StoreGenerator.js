@@ -32,10 +32,6 @@ export const StoreGenerator = ({ userId, setPageTitle, setPageDescription }) => 
     fetchStoreItems();
   }, [userId]);
 
-  useEffect(() => {
-    setPageTitle('My Store');
-    setPageDescription('This is where all the items for trade will go');
-  }, [userId, setPageTitle, setPageDescription]);
 
   return (
     <section>

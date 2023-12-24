@@ -72,6 +72,7 @@ export const Dock = () => {
                             <div className="thing-to-do-title">Trading</div>
                             <div className="things-to-do-list">
                                 <Link to="/items" className="link" onClick={toggleMenu}><div className="thing-to-do flex-center-start"><img className="icon" src={webkinzItemsIcon}></img>Webkinz Items</div></Link>
+                                
                                 <Link to="/my-store" className="link" onClick={toggleMenu}><div className="thing-to-do flex-center-start"><img className="icon" src={wshopIcon}></img>My Store</div></Link>
                                 
                                 <div className="thing-to-do flex-center-start"><img className="icon" src={wshopEditIcon}></img>Edit Store</div>

@@ -58,6 +58,14 @@ button {background: #3387EC; padding: 5px; color: white; border-radius: 5px;}
 
 .for-sale {border: 2px solid red;}
 
+.item-page {padding: 25px; background: #e2e2e2; border-radius: 8px; border: 3px solid black; }
+.item-page-img {width: 200px; height: 200px;  margin-right: 20px;}
+.mini-profile {padding: 10px; max-width: 100px; background: var(--avatar-yellow); border-radius: 4px; border: 3px solid var(--dock-gold); margin: 10px;}
+.mini-profile img {height: 100px; margin: 0px 10px 10px; width: 100px; border: 2px solid black; border-radius: 4px;}
+.for-sale {
+    border: 2px solid green; /* Add your desired border styles here */
+  }
+
 /* Checkbox Switch Styling */
 /* StoreSetup.css */
 
@@ -122,3 +130,4 @@ button {background: #3387EC; padding: 5px; color: white; border-radius: 5px;}
 .item-filters-list {border-radius: 6px 6px 0px 0px; background: var(--off-white); padding: 5px 0px; max-width: 250px;}
 .items-list {width: calc(100% - 317px); background: var(--off-white); border-radius: 0px 6px 6px 0px; margin-right: 10px; padding: 10px; height: 60vh; overflow-y: scroll;}
 .in-collection-indicator p {display: none;}
+

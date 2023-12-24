@@ -105,7 +105,7 @@ export const PublicProfile = ({ setPageTitle, setPageDescription }) => {
           {storeVisibility === true ? (
             <>
               <p>Filter By:</p>
-              <StoreGenerator userId={userId} setPageTitle={setPageTitle} setPageDescription={setPageDescription} />
+              <StoreGenerator userId={userId} />
             </>
           ) : (
             <p>This store is set to private :-C</p>

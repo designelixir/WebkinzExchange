@@ -26,7 +26,7 @@ html {
 }
 
 .page-title {width: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column; }
-.page-container {padding: 10px;  border-radius: 8px; border: 3px solid gray; background: var(--off-white)}
+.page-container {padding: 10px;  border-radius: 8px; border: 3px solid var(--dock-purple); background: var(--off-white)}
 
 button {margin: 5px;}
 button:hover {transform: scale(1.01); cursor: pointer; text-decoration: underline!important;}
@@ -62,6 +62,8 @@ header {margin-bottom: 50px; }
 .item-image {width: 100px; height: 100px; background-size: contain; background-position: center center; background-repeat: no-repeat;}
 .profile-photo {width: 100px; height: 100px; background-size: contain; background-position: center center; background-repeat: no-repeat;}
 
+.gray {color: gray;}
+
 .link {text-decoration: none; color: inherit; font-weight: 500; line-height: 0px;}
 .hover:hover {transform: scale(1.01); cursor: pointer; text-decoration: underline!important;}
 .link:hover {text-decoration: underline; font-weight: 700}
@@ -70,8 +72,9 @@ header {margin-bottom: 50px; }
 
 .search-bar {border: 2px solid gray; border-radius: 4px;}
 .search-bar input {width: 80vw; padding: 10px;}
-.tab-button-active {background: var(--dock-purple); border: none; padding: 10px 25px; border: 2px solid white; border-bottom: none; margin-bottom: 0px; border-radius: 4px 4px 0px 0px}
-.tab-button {background: var(--inset-dock-purple); border: none; opacity: 0.8; padding: 10px 25px; margin-bottom: 0px; border-radius: 4px 4px 0px 0px}
+
+.tab-button-active {background: var(--dock-purple); border: none; padding: 10px 25px; border: 2px solid var(--dock-purple); border-bottom: none; margin-bottom: 0px; border-radius: 4px 4px 0px 0px; color: white; margin: 0px 2px;}
+.tab-button {background: var(--inset-dock-purple); border: none; opacity: 0.8; padding: 10px 25px; margin-bottom: 0px; border-radius: 4px 4px 0px 0px; color: white; margin: 0px 2px}
 
 .item-row {margin: 5px; border: 1px solid black; border-radius: 4px; padding: 5px;}
 
